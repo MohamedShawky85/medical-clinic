@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "8c4d9c1c-6692-4641-937c-f17899cbe17c",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22990081"
+	},
+	"item": [
+		{
+			"name": "Add Patient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Ahmed\",\r\n\"age\":27\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/clinic/v1/private/api/patient/add-patient",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clinic",
+						"v1",
+						"private",
+						"api",
+						"patient",
+						"add-patient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Appointment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"patientId\":2,\r\n\"appointmentDate\":\"2022-12-02\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/clinic/v1/private/api/appointment/add-appointment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clinic",
+						"v1",
+						"private",
+						"api",
+						"appointment",
+						"add-appointment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel Appointment",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/clinic/v1/private/api/appointment/cancel/11?reason=Appointment date not Ok for me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clinic",
+						"v1",
+						"private",
+						"api",
+						"appointment",
+						"cancel",
+						"11"
+					],
+					"query": [
+						{
+							"key": "reason",
+							"value": "Appointment date not Ok for me"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAppointments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/clinic/v1/private/api/appointment/appointments/2022-12-02",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clinic",
+						"v1",
+						"private",
+						"api",
+						"appointment",
+						"appointments",
+						"2022-12-02"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filterAppointmentsByPatientName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/clinic/v1/private/api/appointment/appointments/2022-12-02",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clinic",
+						"v1",
+						"private",
+						"api",
+						"appointment",
+						"appointments",
+						"2022-12-02"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewPatientAppointments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/clinic/v1/private/api/appointment/appointments/2022-12-02",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clinic",
+						"v1",
+						"private",
+						"api",
+						"appointment",
+						"appointments",
+						"2022-12-02"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
